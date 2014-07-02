@@ -48,6 +48,7 @@ public class SpatialspottingApplication extends Html5Application {
 		loadStyleSheet(s,"generic");
 		loadStyleSheet(s,"krusty-component");
 		loadStyleSheet(s,"jquery-mobile2");
+		loadStyleSheet(s, "terms");
 		
 		// Do we already have a screen in the application that claims to be a mainscreen ?
 		if (screenmanager.hasRole("mainscreen") && (fixedrole==null || !fixedrole.equals("mainscreen"))) {
@@ -87,11 +88,14 @@ public class SpatialspottingApplication extends Html5Application {
 	
 	private void createMainScreen(Screen s){
 		try{
+			System.out.println("createMainScreen()");
 			s.setRole("mainscreen");
 			loadContent(s, "joinbutton");
 			loadContent(s, "krustytouch");
 			loadContent(s, "screenoverview");
 			loadContent(s, "availableapplications");
+			loadContent(s, "terms");
+			s.putMsg("terms", "", "show()");
 			s.putMsg("availableapplications", "", "setApplications(" + getAvailableApplications() + ")");
 			s.putMsg("krustytouch", "", "setPresentation(" + presentation + ")");
 			s.putMsg("krustytouch", "", "setRole(primary)");
