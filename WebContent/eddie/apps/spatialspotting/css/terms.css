@@ -36,6 +36,24 @@
 	cursor: pointer;
 }
 
+#screen #terms button{
+	border: none;
+	background-color: #4aa0d5;
+	padding: 5px;
+	color: white;
+	font-size: 15px;
+}
+
+#screen #terms a{
+	color: white;
+}
+#screen #terms a:active{
+	color: white;
+}
+
+#screen #terms a:visited{
+	color: white;
+}
 #screen #terms .contents{
 	margin: 0 auto;
 	width: 600px;
