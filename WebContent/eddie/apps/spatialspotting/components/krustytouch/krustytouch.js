@@ -357,7 +357,7 @@ function Krustytouch(options){
 	self._setPresentation = function(presentation){
 		settings.component.krusty({
 			'uri': presentation,
-			'imgLocation': '/eddie/img/spatialspotting/'
+			'imgLocation': '/eddie/apps/spatialspotting/img/'
 		});
 	};
 	
